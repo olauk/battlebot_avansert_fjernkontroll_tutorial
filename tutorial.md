@@ -32,7 +32,7 @@ input.onGesture(Gesture.Shake, function () {
 
 Vi skal nå hente inn verdiene for __Pitch__ - hvor mye vi tipper microbit fremover eller bakover. Hvis vi tipper den mot oss blir verdien positiv. Hvis vi tipper den fra oss blir den negativ. 
 Microbit måler da hvor mange grader den blir tippet. 
-Lag en variabel Hastighet og sett den til ``||input:helinig fremover - bakover||`` 
+Lag en variabel __Hastighet__ og sett den til ``||input:helinig fremover - bakover||`` 
 Plasser den i ``||basic:gjenta for alltid||`` 
 
 ```blocks
@@ -44,7 +44,7 @@ basic.forever(function () {
 ### Steg 3
 
 Vi skal gjøre det samme for å hente en verdi for __Roll__ som skal la oss svinge battlebot.
-Lag en variabel Sving og sett den til ``||input:helinig venstre - høyre||`` 
+Lag en variabel __Sving__ og sett den til ``||input:helinig venstre - høyre||`` 
 
 ```blocks
 basic.forever(function () {
