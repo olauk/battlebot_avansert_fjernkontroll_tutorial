@@ -57,8 +57,8 @@ basic.forever(function () {
 
 For å gjøre det enklere å styre er det lurt å visualisere hvordan vi heller microbit på skjermen.
 Vi bruker ``||leds:tenn (x) (y)||`` men skal bruke et triks:  
-Vi må regne om verdien fra hvordan vi bikker på microbit -90 - 90 til et koordinat på skjermen til mirobit.
-Vi regner derfor om hastighet fra lav -90 høy 90 til lav 0 høy 4 og setter det som (y)  
+Vi må regne om verdien fra hvordan vi bikker på microbit -45 - 45 til et koordinat på skjermen til mirobit.
+Vi regner derfor om hastighet fra lav -45 høy 45 til lav 0 høy 4 og setter det som (y)  
 Gjør det samme for sving og sett den verdien for (x)
 For å oppdatere skjermen legger vi inn blokken tøm skjerm først i gjenta for alltid.
 ```blocks
@@ -66,7 +66,7 @@ basic.forever(function () {
     basic.clearScreen()
     Pitch = input.rotation(Rotation.Pitch)
     Roll = input.rotation(Rotation.Roll)
-    led.plot(Math.map(Sving, -90, 90, 0, 4), Math.map(Hastighet, -90, 90, 0, 4))
+    led.plot(Math.map(Sving, -45, 45, 0, 4), Math.map(Hastighet, -45, 45, 0, 4))
 })
 ```
 ### Steg 6
@@ -81,7 +81,7 @@ basic.forever(function () {
     basic.clearScreen()
     Pitch = input.rotation(Rotation.Pitch)
     Roll = input.rotation(Rotation.Roll)
-    led.plot(Math.map(Sving, -90, 90, 0, 4), Math.map(Hastighet, -90, 90, 0, 4))
+    led.plot(Math.map(Sving, -45, 45, 0, 4), Math.map(Hastighet, -45, 45, 0, 4))
     radio.sendValue("H", Hastighet)
     radio.sendValue("A", AvPå)
     radio.sendValue("S", Sving)
