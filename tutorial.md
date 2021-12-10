@@ -69,7 +69,7 @@ basic.forever(function () {
     led.plot(Math.map(Sving, -45, 45, 0, 4), Math.map(Hastighet, -45, 45, 0, 4))
 })
 ```
-### Steg 6
+### Steg 5
 
 Det siste vi må gjøre er å sende verdiene til battlebot. Vi bruker radio send verdi:
 Send H med verdien til _Hastighet_  
@@ -87,37 +87,8 @@ basic.forever(function () {
     radio.sendValue("S", Sving)
 })
 ```
-```blocks
-input.onGesture(Gesture.TiltLeft, function () {
-    radio.sendNumber(3)
-})
-```
-
-### Steg 5
-Vi skal nå gjøre det samme for å snu til høyre:   
-Hent ``||input:når ristes||`` fra inndata. Endre denne til ``||input:når helning høyre||`` Hent ``||radio:radio send tall||`` fra radio. Velg selv hvilket tall som skal bety snu til høyre.
-
-```blocks
-input.onGesture(Gesture.TiltLeft, function () {
-    radio.sendNumber(3)
-})
-input.onGesture(Gesture.TiltRight, function () {
-    radio.sendNumber(4)
-})
-```
-
-### Stopp @unplugged
-Det er lurt å ha en mulighet for å stoppe battleboten.
-Dette kan gjøres på ulike måter. Vi viser her hvordan dere kan gjøre det ved å bruke ``||input:når knapp A trykkes||``
 
 ### Steg 6
-Hent ``||input:når knapp A trykkes||`` fra inndata. Hent ``||radio:radio send tall||`` fra radio. Velg selv hvilket tall som skal bety stopp.
-```blocks
-input.onButtonPressed(Button.AB, function () {
-    radio.sendNumber(0)
-})
-```
-### Steg 7
 For at vi skal kunne kommunisere med riktig micro:bit er det viktig at både fjernkontroll og mottaker er på samme radiogruppe.   
 Hent ``||radio:sett radiogruppe||`` fra radio og plasser i ved start. Sett radiogruppe til et nummer som ingen av de andre gruppene bruker. 
 
